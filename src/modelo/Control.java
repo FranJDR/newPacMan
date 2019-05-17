@@ -37,10 +37,9 @@ public class Control {
 		for (int i = 0; i < this.lector.getMatrizMapa().length; i++) {
 			for (int j = 0; j < this.lector.getMatrizMapa()[i].length; j++) {
 				if (this.lector.getMatrizMapa()[i][j] == 0)
-//					g.drawImage(this.cocos.getSubimage(0, 0, 47, 47), j * 30, i * 30, 25, 25, null);
-					if (this.lector.getMatrizMapa()[i][j] == 3)
-//					g.drawImage(this.cocos.getSubimage(47, 0, 47, 47), j * 30, i * 30, 25, 25, null);
-						g.drawImage(this.sprite.getCocos().getSubimage(47, 0, 47, 47), j * 30, i * 30, 25, 25, null);
+					g.drawImage(this.sprite.getSubimageCocos(0, 0, 47, 47), j * 30, i * 30, 25, 25, null);
+				if (this.lector.getMatrizMapa()[i][j] == 3)
+					g.drawImage(this.sprite.getSubimageCocos(47, 0, 47, 47), j * 30, i * 30, 25, 25, null);
 			}
 		}
 		dibujarPersonajes(g);

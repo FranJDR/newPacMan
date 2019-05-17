@@ -10,10 +10,6 @@ public class Lector {
 	private String ruta = "./Archivos/01.txt";
 	private String cadena = "";
 
-	public static void main(String[] args) {
-		Lector lector = new Lector();
-	}
-
 	public Lector() {
 		super();
 		leerArchivo();

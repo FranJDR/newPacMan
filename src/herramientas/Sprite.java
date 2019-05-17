@@ -1,5 +1,6 @@
 package herramientas;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -73,6 +74,10 @@ public class Sprite {
 
 	public BufferedImage getCocos() {
 		return cocos;
+	}
+
+	public Image getSubimageCocos(int x, int y, int w, int h) {
+		return this.cocos.getSubimage(x, y, w, h);
 	}
 
 }
