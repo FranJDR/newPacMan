@@ -1,4 +1,4 @@
-package modelo;
+package herramientas;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

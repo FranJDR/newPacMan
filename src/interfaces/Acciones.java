@@ -2,9 +2,9 @@ package interfaces;
 
 import java.awt.Graphics;
 
-import modelo.Teclado;
+import herramientas.Teclado;
 
-public interface Acciones {
+public abstract interface Acciones {
 
 	public void dibujar(Graphics g);
 

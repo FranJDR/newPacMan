@@ -6,6 +6,7 @@ import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import herramientas.Teclado;
 import interfaces.Acciones;
 
 public class Personaje implements Acciones {
@@ -73,6 +74,22 @@ public class Personaje implements Acciones {
 	private void moverBlinky() {
 		// TODO Auto-generated method stub
 
+	}
+
+	public Point getPosicion() {
+		return posicion;
+	}
+
+	public TipoPersonajes getPersonaje() {
+		return personaje;
+	}
+
+	public double getY() {
+		return this.posicion.getY();
+	}
+
+	public double getX() {
+		return this.posicion.getX();
 	}
 
 }

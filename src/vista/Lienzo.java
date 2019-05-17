@@ -11,8 +11,9 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
+import herramientas.Teclado;
 import interfaces.Acciones;
-import modelo.Teclado;
+import modelo.Control;
 
 public class Lienzo extends java.awt.Canvas {
 
@@ -32,7 +33,7 @@ public class Lienzo extends java.awt.Canvas {
 		requestFocus();
 	}
 
-	public void dibujar(ArrayList<Acciones> dibujables) {
+	public void dibujar(Control mapa) {
 		BufferStrategy buffer = getBufferStrategy();
 		if (buffer == null) {
 			createBufferStrategy(4);
@@ -44,10 +45,7 @@ public class Lienzo extends java.awt.Canvas {
 		g.setColor(Color.DARK_GRAY);
 		g.fillRect(0, 0, 1920, 1080);
 		g.drawImage(this.imgMap.getSubimage(0, 0, this.imgMap.getWidth(), this.imgMap.getHeight()), 7, 0, null);
-		for (Acciones dibujable : dibujables) {
-			dibujable.dibujar(g);
-		}
-
+		mapa.dibujar(g);
 		Toolkit.getDefaultToolkit().sync();
 		g.dispose();
 		buffer.show();
