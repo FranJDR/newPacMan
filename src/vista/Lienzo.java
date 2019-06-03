@@ -3,16 +3,11 @@ package vista;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-
-import javax.swing.ImageIcon;
 
 import herramientas.Teclado;
-import interfaces.Acciones;
 import modelo.Control;
 
 public class Lienzo extends java.awt.Canvas {
@@ -26,6 +21,7 @@ public class Lienzo extends java.awt.Canvas {
 		this.ancho = imgMap.getWidth();
 		this.alto = imgMap.getHeight();
 		this.imgMap = imgMap;
+
 		addKeyListener(teclado);
 		setIgnoreRepaint(true);
 		setPreferredSize(new Dimension(this.ancho, this.alto));

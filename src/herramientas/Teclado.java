@@ -30,6 +30,18 @@ public class Teclado implements KeyListener {
 
 	}
 
+	public String getDiereccion() {
+		if (this.arriba)
+			return "N";
+		if (this.abajo)
+			return "S";
+		if (this.derecha)
+			return "E";
+		if (this.izquierda)
+			return "O";
+		return "";
+	}
+
 	public void keyReleased(KeyEvent e) {
 		teclas[e.getKeyCode()] = false;
 	}
